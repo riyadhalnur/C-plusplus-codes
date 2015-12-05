@@ -1,10 +1,11 @@
-/*#include<iostream>
+#include<iostream>
 using namespace std;
+
 class base{
 protected:
 	int i;
 public:
-	base( int m ){ 
+	base( int m ){
 		cout << "Inside base constructor:" << endl;
 		i = m;
 	}
@@ -15,6 +16,7 @@ public:
 		return 0;
 	}
 };
+
 class derived1 : public base{
 public:
 	derived1( int n ) : base(n){
@@ -29,6 +31,7 @@ public:
 		return i + i;
 	}
 };
+
 class derived2 : public derived1{
 public:
 	derived2( int r ) : derived1(r){
@@ -43,6 +46,7 @@ public:
 		return i * i;
 	}
 };
+
 int main(){
 	base *p;
 	derived1 t1( 10 );
@@ -50,11 +54,11 @@ int main(){
 
 	p = &t1;
 	cout << p -> myFunc() << endl;
-	//cout << t1.myFunc() << endl;
+	cout << t1.myFunc() << endl;
 
 	p = &t2;
 	cout << p -> myFunc() << endl;
-	//cout << t2.myFunc() << endl;
+	cout << t2.myFunc() << endl;
 
 	return 0;
-}*/
+}
